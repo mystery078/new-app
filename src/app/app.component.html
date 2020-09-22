@@ -1,0 +1,29 @@
+<div class="main-content" *ngIf="flag">
+    <div class="container">
+        <div class="menu-header">
+            <ul>
+                <li>
+                    <a routerLink="/">Trang chủ</a>
+                </li>
+                <li>
+                    <a routerLink="">Trang chủ</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="main-left">
+                <iframe id="ytplayer" type="text/html" width="640" height="360" 
+                [src]="currentSrc | safe:'resourceUrl'"
+                frameborder="0" ></iframe>
+
+            </div>
+            <div class="main-right">
+                <ul>
+                    <li *ngFor="let item of videos" class="clickable" (click)="changeVideo(item.snippet.resourceId.videoId)">
+                        <img src="{{item.snippet.thumbnails.standard.url}}" alt="" style="width: 150px">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
