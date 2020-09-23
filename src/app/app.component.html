@@ -1,28 +1,35 @@
 <div class="main-content" *ngIf="flag">
-    <div class="container">
-        <div class="menu-header">
-            <ul>
-                <li>
-                    <a routerLink="/">Trang chủ</a>
-                </li>
-                <li>
-                    <a routerLink="">Trang chủ</a>
-                </li>
-            </ul>
+    <div class="menu-header">
+        <div class="logo">
+            
         </div>
-        <div class="content">
-            <div class="main-left">
-                <iframe id="ytplayer" type="text/html" width="640" height="360" 
-                [src]="currentSrc | safe:'resourceUrl'"
-                frameborder="0" ></iframe>
+        <ul class="list-unstyled">
+            <li >
+                <a class="active" routerLink="/">Trang chủ</a>
+            </li>
+        </ul>
+    </div>
 
-            </div>
-            <div class="main-right">
-                <ul>
-                    <li *ngFor="let item of videos" class="clickable" (click)="changeVideo(item.snippet.resourceId.videoId)">
-                        <img src="{{item.snippet.thumbnails.standard.url}}" alt="" style="width: 150px">
-                    </li>
-                </ul>
+    <div class="content">
+        <div class="container-custom">
+            <div class="row">
+                <div class="main-left">
+                    <div class="video-container">
+                        <iframe id="ytplayer" type="text/html" [src]="currentSrc | safe:'resourceUrl'"
+                            frameborder="0"></iframe>
+                    </div>
+                    <div class="video-infor">
+                        <h2 class="video-title">{{currentVideo.title}}</h2>
+                    </div>
+    
+                </div>
+                <div class="main-right">
+                    <div class="list-video">
+                        <div *ngFor="let item of videos" class="clickable item-video" (click)="changeVideo(item.snippet)">
+                            <img src="{{item.snippet.thumbnails.standard.url}}" alt="{{item.snippet.title}}">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

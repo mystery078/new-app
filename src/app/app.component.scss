@@ -1,3 +1,98 @@
 .clickable{
-    cursor: pointer;
+cursor: pointer;
+}
+.main-content{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-custom{
+    width: 1600px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+.menu-header{
+    flex: 50px;
+    height: 70px;
+    max-height: 70px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: #1f224d;
+    .logo{
+        width: 200px;
+    }
+    ul{
+        margin: 0;
+        li{
+            a{
+                color: #fff;
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: 500;
+                position: relative;
+                &.active:after{
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    background-color: #fff;
+                    left: 0;
+                    bottom: -10px;
+                }
+            }
+        }
+    }
+}
+.content{
+    background-image: url('/assets/background.JPG');
+    background-size: 100% 110%;
+    background-repeat: no-repeat;
+    background-position: center -70px;
+    padding-top: 20px;
+    flex: 1;
+    display: flex;
+    .main-left{
+        padding-left: 10px;
+        padding-right: 10px;
+        flex: 1;
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .video-infor{
+            margin-top: 20px;
+            .video-title{
+                color: #fff;
+            }
+        }
+    }
+    .main-right{
+        width: 230px;
+        max-width: 230px;
+        padding-right: 10px;
+        padding-left: 10px;
+        .list-video{
+            .item-video{
+                &+.item-video{
+                    margin-top: 8px;
+                }
+                img{
+                    width: 180px;
+                }
+            }
+        }
+    }
 }
