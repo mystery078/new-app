@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { SafePipe } from './services/safe.pipe';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SafePipe } from './services/safe.pipe';
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    SlickCarouselModule
   ],
   providers: [NgxSpinnerService, SafePipe],
   bootstrap: [AppComponent]

@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron": "ng build --base-href ./ && tsc --p electron && electron electron/dist/main.js"
   },
   "private": true,
   "dependencies": {
@@ -19,9 +20,13 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "electron": "^4.1.0",
+    "jquery": "^3.5.1",
     "ngx-bootstrap": "^6.1.0",
+    "ngx-slick-carousel": "^0.5.1",
     "ngx-spinner": "^10.0.1",
     "rxjs": "~6.4.0",
+    "slick-carousel": "^1.8.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
