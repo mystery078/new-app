@@ -22,8 +22,6 @@
                         <h2 class="video-title">{{currentVideo.title}}</h2>
                     </div>
                     
-
-                    
                 </div>
                 <div class="main-right">
                     <div class="list-video">
@@ -37,6 +35,9 @@
                            
                             <div class="clickable item-video" (click)="changeVideo(item.snippet)" style="width: 100%; height: 170px;">
                                 <img src="{{item.snippet.thumbnails.standard.url}}" alt="{{item.snippet.title}}">
+                                <div class="cover-content">
+                                    <span class="video-name">{{item.snippet.title}}</span>
+                                </div>
                             </div>
                         </div>
                         </ngx-slick-carousel>
