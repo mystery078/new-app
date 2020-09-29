@@ -41,7 +41,7 @@ export class AppComponent {
     }
 
     changeVideo(video) {
-        this.currentSrc = `https://www.youtube.com/embed/${video.resourceId.videoId}?autoplay=1&origin=http://example.com`;
+        this.currentSrc = `https://www.youtube.com/embed/${video.resourceId.videoId}?autoplay=1&modestbranding=1&origin=http://example.com`;
         this.currentVideo = video
     }
     
